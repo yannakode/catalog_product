@@ -1,6 +1,6 @@
 package br.com.catalogproduct.catalog_product.adapters.in.rest;
 
-import br.com.catalogproduct.catalog_product.application.service.ProductServicePortOutImpl;
+import br.com.catalogproduct.catalog_product.adapters.out.ProductServicepPortOutImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProductController {
 
     @Autowired
-    private ProductServicePortOutImpl service;
+    private ProductServicepPortOutImpl service;
 }

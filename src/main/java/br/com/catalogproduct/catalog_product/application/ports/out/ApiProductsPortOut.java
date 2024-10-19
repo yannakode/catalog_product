@@ -10,11 +10,11 @@ public interface ApiProductsPortOut {
 
     ProductResponse create(ProductRequest productRequest);
 
-    ProductResponse update(ProductRequest productRequest);
+    Optional<ProductResponse> update(ProductRequest productRequest, Long productId);
 
-    void delete(ProductRequest productRequest);
+    void delete(Long productId);
 
-    Optional<ProductResponse> findById(ProductRequest productRequest);
+    Optional<ProductResponse> findById(Long productId);
 
     List<ProductResponse> findAll();
 }

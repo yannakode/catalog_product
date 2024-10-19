@@ -1,7 +1,7 @@
-package br.com.catalogproduct.catalog_product.application.service;
+package br.com.catalogproduct.catalog_product.adapters.out;
 
 import br.com.catalogproduct.catalog_product.adapters.out.repositories.ProductRepository;
-import br.com.catalogproduct.catalog_product.application.ports.in.ProductCrudUseCase;
+import br.com.catalogproduct.catalog_product.application.ports.out.ApiProductsPortOut;
 import br.com.catalogproduct.catalog_product.domain.dto.ProductRequest;
 import br.com.catalogproduct.catalog_product.domain.dto.ProductResponse;
 import br.com.catalogproduct.catalog_product.domain.model.Product;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProductServicePortOutImpl implements ProductCrudUseCase {
+public class ProductServicepPortOutImpl implements ApiProductsPortOut {
 
     @Autowired
     private ProductRepository productRepository;
