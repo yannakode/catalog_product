@@ -4,6 +4,7 @@ import br.com.catalogproduct.catalog_product.domain.dto.ProductRequest;
 import br.com.catalogproduct.catalog_product.domain.dto.ProductResponse;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ApiProductsPortOut {
 
@@ -11,9 +12,9 @@ public interface ApiProductsPortOut {
 
     ProductResponse update(ProductRequest productRequest);
 
-    ProductResponse delete(ProductRequest productRequest);
+    void delete(ProductRequest productRequest);
 
-    ProductResponse findById(ProductRequest productRequest);
+    Optional<ProductResponse> findById(ProductRequest productRequest);
 
     List<ProductResponse> findAll();
 }

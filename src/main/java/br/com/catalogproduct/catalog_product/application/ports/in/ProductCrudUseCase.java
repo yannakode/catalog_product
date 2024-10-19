@@ -4,16 +4,17 @@ import br.com.catalogproduct.catalog_product.domain.dto.ProductRequest;
 import br.com.catalogproduct.catalog_product.domain.dto.ProductResponse;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface ProductCrudUseCase {
 
     ProductResponse create(ProductRequest productRequest);
 
-    ProductResponse update(ProductRequest productRequest);
+    Optional<ProductResponse> update(ProductRequest productRequest, Long productId);
 
-    ProductResponse delete(ProductRequest productRequest);
+    void delete(Long id);
 
-    ProductResponse findById(ProductRequest productRequest);
+    Optional<ProductResponse> findById(Long id);
 
     List<ProductResponse> findAll();
 }
